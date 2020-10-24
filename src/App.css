@@ -1,5 +1,5 @@
 html body {
-  background: #8fa4e6;
+  background: rgb(190, 39, 39)
 }
 .app-wrapper {
   display: grid;
@@ -16,26 +16,6 @@ html body {
   /* grid-gap: 10px; */
 }
 
-.header {
-  grid-area: h;
-  background-color: rgb(43, 226, 135);
-}
-.header img {
-  width: 20px;
- 
-}
 
-.nav{
-  grid-area: n;
-  background-color: rgb(214, 84, 84)
-}
 
-.content{
-  grid-area: c;
-  background-color: #3353b1;
-}
 
-.content img {
-  width: 500px;
-  margin-top: center;
-}
