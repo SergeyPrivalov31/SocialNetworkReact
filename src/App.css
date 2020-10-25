@@ -1,9 +1,9 @@
 html body {
-  background: rgb(190, 39, 39)
+  background: rgb(204, 170, 170)
 }
 .app-wrapper {
   display: grid;
-  width: 700px;
+  width: 500px;
   
   margin-top: center;
 
