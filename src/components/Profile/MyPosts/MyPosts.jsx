@@ -5,8 +5,8 @@ const MyPosts = () => {
   return (
     <div className={s.content}>
       <div>My Posts</div>
-      <Post message='Hi everyone!' count={5} />
-      <Post message='It is my first post' count={3} />
+      <Post message='Hi everyone!' likesCount='5' />
+      <Post message='It is my first post' likesCount='7' />
     </div>
   );
 

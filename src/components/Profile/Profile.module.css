@@ -1,12 +1,15 @@
-.content{
-  grid-area: c;
-  background-color: rgb(202, 102, 35);
-}
 
-.content img {
+
+.wallpepper {
   width: 400px;
   margin-top: center;
 }
 .ava img {
  width: 50px;
+}
+.button {
+  border-radius: 40px;
+  background-color: rgb(240, 65, 65);
+  border-color: yellow;
+  color: rgb(57, 230, 100);
 }

@@ -4,13 +4,13 @@ import MyPosts from './MyPosts/MyPosts';
 
 const Profile = () => {
   return (
-    <div className={s.content}>
+    <div>
       <div>
-        <img src="https://tinypng.com/images/social/website.jpg"></img>
+        <img className={s.wallpepper} src="https://tinypng.com/images/social/website.jpg"></img>
       </div>
       <div className={s.ava}>ava+discription</div>
       <textarea>Write the post</textarea>
-      <botton>Confirm</botton>
+      <button className={s.button}>Confirm</button>
       <MyPosts />
      
     </div>

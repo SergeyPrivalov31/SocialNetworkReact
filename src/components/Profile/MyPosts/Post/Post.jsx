@@ -10,7 +10,7 @@ const Post = (props) => {
       </div>
       <div className={s.like}>
       <img src='https://media.istockphoto.com/vectors/logo-heart-illustrationred-heart-design-icon-flat-modern-flat-love-vector-id1095022948?k=6&m=1095022948&s=170667a&w=0&h=-jGcCNLSkLNZpU4VylJdQgeLI830TR8loHOPiNw6zfw='/> 
-      {props.count}
+      {props.likesCount}
       </div>
     </div>
   );
