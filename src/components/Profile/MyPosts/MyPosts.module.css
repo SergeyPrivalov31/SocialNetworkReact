@@ -1,12 +1,17 @@
-.content{
-  grid-area: c;
-  background-color: lightgrey;
-  border-radius: 20px;
+.content {
+    grid-area: c;
+    background-color: lightgrey;
+    border-radius: 20px;
+    padding-left: 10px;
 }
 
-.content{
-color: deepskyblue;
-  font-family: Cambria;
-  font: discretionary-ligatures;
-  font-size: large
+.content {
+    color: deepskyblue;
+    font-family: Cambria;
+    font: discretionary-ligatures;
+    font-size: large
+}
+
+.postsBlock {
+    padding: 10px;
 }

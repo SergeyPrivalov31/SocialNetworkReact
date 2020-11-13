@@ -1,16 +1,16 @@
-.nav{
+.nav {
 
     grid-area: n;
     width: 100px;
     background-color: whitesmoke;
     padding: 20px;
-    }
+}
 
 .item a {
-  color: deepskyblue;
+    color: deepskyblue;
     text-decoration: none;
 }
 
 .item a.active {
-  color: goldenrod;
+    color: goldenrod;
 }

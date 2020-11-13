@@ -1,19 +1,13 @@
 import React from 'react';
 import s from './Profile.module.css';
 import MyPosts from './MyPosts/MyPosts';
+import ProfileInfo from "./ProfileInfo/ProfileInfo";
 
 const Profile = (props) => {
     return (
         <div>
-            <div>
-                <img className={s.wallpepper}
-                     src=" "/>
-            </div>
-            <div className={s.ava}>ava+discription</div>
-            <textarea>Write the post</textarea>
-            <button className={s.button}>Confirm</button>
+            <ProfileInfo/>
             <MyPosts/>
-
         </div>
     );
 }

@@ -1,14 +1,18 @@
 .header {
     grid-area: hr;
-    background-color: #ffffff;
+    background-color: lightgrey;
 
-    color: #6da5db;
-   font-family: Arial;
+    color: deepskyblue;
+    font-family: Arial;
+    font-style: italic;
+    font-size: larger;
     position: center;
-  }
-  .header img {
+    text-align: center;
+}
+
+.header img {
 
     width: 100px;
-   
-  }
+
+}
   
