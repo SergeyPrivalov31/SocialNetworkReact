@@ -1,15 +1,18 @@
 
-
 .wallpepper {
-  width: 400px;
-  margin-top: center;
+    width: 1050px;
+    height: 250px;
+    margin: 25px;
+    background-color: deepskyblue;
 }
+
 .ava img {
- width: 50px;
+    width: 50px;
 }
+
 .button {
-  border-radius: 40px;
-  background-color: rgb(240, 65, 65);
-  border-color: yellow;
-  color: rgb(57, 230, 100);
+    border-radius: 40px;
+    background-color: rgb(240, 65, 65);
+    border-color: yellow;
+    color: rgb(57, 230, 100);
 }

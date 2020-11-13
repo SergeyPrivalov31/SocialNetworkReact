@@ -2,12 +2,12 @@
 
     grid-area: n;
     width: 100px;
-    background-color: rgb(214, 84, 84);
+    background-color: whitesmoke;
     padding: 20px;
     }
 
 .item a {
-  color: white;
+  color: deepskyblue;
     text-decoration: none;
 }
 
