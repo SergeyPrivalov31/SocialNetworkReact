@@ -5,7 +5,7 @@ const HeaderRight = () => {
     return (
         <header className={s.header}>
 
-            <div>Гупик</div>
+            <div>GET ANIMATION</div>
 
         </header>
     );

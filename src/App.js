@@ -18,8 +18,8 @@ const App = (props) => {
                 <HeaderRight/>
                 <Navbar/>
                 <div className='app-wrapper-content'>
-                    <Route path='/Profile' component={Profile}/>
-                    <Route path='/Dialogs' component={Dialogs}/>
+                    <Route path='/Profile' render={() => <Profile posts={props.posts}/>}/>
+                    <Route path='/Dialogs' render={() => <Dialogs dialogs={props.dialogs} messages={props.messages}/>}/>
                     <Route path='/News' component={News}/>
                     <Route path='/Music' component={Music}/>
                     <Route path='/Settings' component={Settings}/>
@@ -27,6 +27,6 @@ const App = (props) => {
             </div>
         </BrowserRouter>);
 }
-
-
 export default App
+
+

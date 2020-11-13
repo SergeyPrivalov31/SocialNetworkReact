@@ -6,7 +6,7 @@ const ProfileInfo = (props) => {
         <div>
             <div>
                 <img className={s.wallpepper}
-                     src="https://images.wallpaperscraft.ru/image/led_sneg_treshchiny_133131_2560x1080.jpg"/>
+                     src="https://storge.pic2.me/upload/827/5416b7a89a859.jpg"/>
             </div>
             <div className={s.description}>Ava+description</div>
             <div className={s.textArea}> <textarea >Write the post</textarea>

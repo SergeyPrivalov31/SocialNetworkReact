@@ -1,13 +1,16 @@
 .header {
     grid-area: hr;
-    background-color: navajowhite;
+    background-color: lightpink;
 
     color: deepskyblue;
     font-family: Arial;
     font-style: italic;
-    font-size: larger;
+    text-align: center;
+    font-size: 25px;
     position: center;
     text-align: center;
+    border-radius: 10px;
+    padding-top: 5px;
 }
 
 .header img {
