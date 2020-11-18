@@ -15,3 +15,11 @@
 .postsBlock {
     padding: 10px;
 }
+
+.textArea {
+    padding-left: 10px;
+}
+
+.button {
+    background-color: #1fa77f;
+}

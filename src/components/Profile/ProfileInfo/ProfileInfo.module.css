@@ -1,7 +1,7 @@
 
 .description {
     padding: 20px;
-    color: aliceblue;
+    color: #7abad0;
     font-family: Cambria;
     font: discretionary-ligatures;
     font-size: large
@@ -10,9 +10,6 @@
 .wallpepper {
     width: 1050px;
     height: 300px;
-    background-color: deepskyblue;
-}
+    background-color: #1fa77f;
+    }
 
-.textArea {
-    padding-left: 10px;
-}

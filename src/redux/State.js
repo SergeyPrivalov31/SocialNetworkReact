@@ -16,7 +16,6 @@ let state = {
             {id: 6, name: 'Artem'},
             {id: 7, name: 'Roman'}
         ],
-
         messages: [
             {id: 1, message: 'Hallo!!!'},
             {id: 2, message: 'I am very glad to see you!!!'},
@@ -27,8 +26,10 @@ let state = {
             {id: 7, message: 'yoooooouuu'}
         ]
     },
-    sidebar:{
-
-    }
+    users: [
+        {id: 1, name: 'Serhio'},
+        {id: 2, name: 'Olyalya'},
+        {id: 3, name: 'Dashunya'}
+        ]
 }
 export default state
