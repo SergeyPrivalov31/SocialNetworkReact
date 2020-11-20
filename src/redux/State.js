@@ -1,5 +1,8 @@
+import {rerenderEntireTree} from "../rerender";
+
 let state = {
     profilePage: {
+        newPostText: "ALOHA",
         posts: [
             {id: 1, message: 'Hi everyone!', likesCount: 5},
             {id: 2, message: 'It is my first post', likesCount: 7},
@@ -7,6 +10,7 @@ let state = {
         ]
     },
     dialogsPage: {
+        newMessageText: "Write now!",
         dialogs: [
             {id: 1, name: 'Serhio'},
             {id: 2, name: 'Olyalya'},
@@ -19,17 +23,42 @@ let state = {
         messages: [
             {id: 1, message: 'Hallo!!!'},
             {id: 2, message: 'I am very glad to see you!!!'},
-            {id: 3, message: 'It is so fun'},
-            {id: 4, message: 'Yo'},
-            {id: 5, message: 'yo'},
-            {id: 6, message: 'yoooo'},
-            {id: 7, message: 'yoooooouuu'}
+            {id: 3, message: 'It is so fun'}
         ]
     },
     users: [
         {id: 1, name: 'Serhio'},
         {id: 2, name: 'Olyalya'},
         {id: 3, name: 'Dashunya'}
-        ]
+    ]
+}
+/*window.state = state;*/
+export let addPost = () => {
+    let newPost = {
+        id: 5,
+        message: state.profilePage.newPostText,
+        likesCount: 0
+    };
+    state.profilePage.posts.push(newPost);
+    state.profilePage.newPostText = '';
+    rerenderEntireTree(state);
+}
+export let updateNewPostText = (newText) => {
+    state.profilePage.newPostText = newText;
+    rerenderEntireTree(state);
+}
+
+export let addMessage = () => {
+    let newMessage = {
+        id: 4,
+        message: state.dialogsPage.newMessageText,
+        };
+    state.dialogsPage.messages.push(newMessage);
+    state.dialogsPage.newMessageText = '';
+    rerenderEntireTree(state);
+}
+export let updateNewMessageText = (newText) => {
+    state.dialogsPage.newMessageText = newText;
+    rerenderEntireTree(state);
 }
 export default state
