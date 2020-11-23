@@ -13,26 +13,23 @@ import Friends from "./components/Friends/Friends";
 
 const App = (props) => {
     return (
-            <div className='app-wrapper'>
-                <Header/>
-                <HeaderRight/>
-                <Navbar/>
-                <div className='app-wrapper-content'>
-                    <Route path='/Profile' component={() =>
-                        <Profile profilePage={props.state.profilePage}
-                                 addPost={props.addPost}
-                                 updateNewPostText={props.updateNewPostText}
-                                 />}/>
-                    <Route path='/Dialogs' component={() =>
-                        <Dialogs dialogsPage={props.state.dialogsPage}
-                                 addMessage={props.addMessage}
-                                 updateNewMessageText={props.updateNewMessageText}/>}/>
-                    <Route path='/News' component={News}/>
-                    <Route path='/Music' component={Music}/>
-                    <Route path='/Settings' component={Settings}/>
-                    <Route path='/Friends' render={() => <Friends state={props.state.users}/>}/>
-                </div>
+        <div className='app-wrapper'>
+            <Header/>
+            <HeaderRight/>
+            <Navbar/>
+            <div className='app-wrapper-content'>
+                <Route path='/Profile' component={() =>
+                    <Profile profilePage={props.state.profilePage}
+                             dispatch={props.dispatch}/>}/>
+                <Route path='/Dialogs' component={() =>
+                    <Dialogs dialogsPage={props.state.dialogsPage}
+                             dispatch={props.dispatch}/>}/>
+                <Route path='/News' component={News}/>
+                <Route path='/Music' component={Music}/>
+                <Route path='/Settings' component={Settings}/>
+                <Route path='/Friends' render={() => <Friends state={props.state.users}/>}/>
             </div>
+        </div>
     )
 }
 
