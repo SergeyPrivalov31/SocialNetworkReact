@@ -24,7 +24,8 @@ const Messages = (props) => {
             <div className={s.textArea}>
                 <textarea onChange={onMessageChange} ref={newMessageElement} value={props.newMessageText}/>
                 <button onClick={addMessage}
-                        className={s.button}>Add Post</button>
+                        className={s.button}>Add Post
+                </button>
             </div>
             {messagesElements}
         </div>

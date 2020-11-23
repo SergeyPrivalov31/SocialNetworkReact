@@ -10,7 +10,6 @@ import Music from "./components/Music/Music";
 import Settings from "./components/Settings/Settings";
 import HeaderRight from "./components/Header/HeaderRight";
 import Friends from "./components/Friends/Friends";
-import {addMessage, addPost} from "./redux/State";
 
 const App = (props) => {
     return (
@@ -21,13 +20,12 @@ const App = (props) => {
                 <div className='app-wrapper-content'>
                     <Route path='/Profile' component={() =>
                         <Profile profilePage={props.state.profilePage}
-                                 addPost={addPost}
+                                 addPost={props.addPost}
                                  updateNewPostText={props.updateNewPostText}
-                                 />}
-                    />
+                                 />}/>
                     <Route path='/Dialogs' component={() =>
                         <Dialogs dialogsPage={props.state.dialogsPage}
-                                 addMessage={addMessage}
+                                 addMessage={props.addMessage}
                                  updateNewMessageText={props.updateNewMessageText}/>}/>
                     <Route path='/News' component={News}/>
                     <Route path='/Music' component={Music}/>
