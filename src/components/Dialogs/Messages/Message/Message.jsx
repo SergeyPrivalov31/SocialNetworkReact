@@ -5,7 +5,7 @@ const Message = (props) => {
    return (
     <div className={s.item}>
       <div>
-        <img src=' ' />
+        <img src='https://nbnews.com.ua/wp-content/uploads/2020/06/maxresdefault-7-700x394.jpg' alt={' '}/>
         <span> {props.message} </span>
       </div>
     </div>

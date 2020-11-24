@@ -7,19 +7,10 @@ const Messages = (props) => {
 
     let messagesElements =
         props.messages.map(m => <Message message={m.message}/>)
-
     let newMessageElement = React.createRef();
-
-
-
-
-
     let addMessage = () => {
         props.dispatch(addMessageActionCreator());
     }
-
-
-
 
     let onMessageChange = () => {
         let text = newMessageElement.current.value;
@@ -29,13 +20,15 @@ const Messages = (props) => {
     return (
         <div className={s.content}>
             <h3>Messages</h3>
+            {messagesElements}
             <div className={s.textArea}>
                 <textarea onChange={onMessageChange} ref={newMessageElement} value={props.newMessageText}/>
-                <button onClick={addMessage}
-                        className={s.button}>Add Post
-                </button>
+                <div>
+                    <button onClick={addMessage}
+                            className={s.button}>Add Post
+                    </button>
+                </div>
             </div>
-            {messagesElements}
         </div>
 
     )
