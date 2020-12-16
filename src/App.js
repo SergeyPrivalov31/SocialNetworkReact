@@ -12,6 +12,7 @@ import HeaderRight from "./components/Header/HeaderRight";
 import Friends from "./components/Friends/Friends";
 
 const App = (props) => {
+    debugger;
     return (
         <div className='app-wrapper'>
             <Header/>
