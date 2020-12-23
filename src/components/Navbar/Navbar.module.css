@@ -1,0 +1,18 @@
+.nav {
+    grid-area: "n";
+    grid-template-rows: 2fr;
+    width: 200px;
+    height: 600px;
+    background-color: whitesmoke;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.item a {
+    color: deepskyblue;
+    text-decoration: none;
+}
+
+.item a.active {
+    color: goldenrod;
+}

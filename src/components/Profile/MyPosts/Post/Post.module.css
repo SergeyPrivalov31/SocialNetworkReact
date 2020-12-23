@@ -1,0 +1,14 @@
+.item{
+color: rebeccapurple;
+font-size: medium
+}
+.item img {
+    width: 50px;
+    height: 50px;
+    border-radius: 40px;
+}
+.like img {
+    width: 20px;
+    height: 20px;
+    border-bottom: 70px;
+}

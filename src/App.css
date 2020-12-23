@@ -1,20 +1,33 @@
-html body {
-  background: rgb(204, 170, 170)
-}
 .app-wrapper {
-  display: grid;
-  width: 500px;
-  
-  margin-top: center;
+  margin: 0 auto;
+    display: grid;
+    width: 1200px;
+    grid-template-areas:"h hr" "n c";
 
-  grid-template-areas:
-  "h h"
-  "n c" ;
-
-  grid-template-rows: 60px 1fr;
-  grid-template-columns: 2fr, 10fr;
-  /* grid-gap: 10px; */
+    grid-template-rows: 60px 1fr;
+    grid-template-columns: 2fr 10fr;
+    grid-gap: 10px;
 }
+
+.app-wrapper-content {
+    grid-area: c;
+    background-color: mediumaquamarine;
+    width: 1050px;
+
+ }
+.app-wrapper {
+    font-family: Montserrat, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 14px;
+    line-height: 1.8;
+    padding: 0;
+    margin: 0;
+    padding-top: 5px;
+    }
+
+
+
 
 
 

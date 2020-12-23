@@ -1,0 +1,21 @@
+.header {
+    grid-area: hr;
+    background-color: lightpink;
+
+    color: deepskyblue;
+    font-family: Arial;
+    font-style: italic;
+    text-align: center;
+    font-size: 25px;
+    position: center;
+    text-align: center;
+    border-radius: 10px;
+    padding-top: 5px;
+}
+
+.header img {
+
+    width: 100px;
+
+}
+  

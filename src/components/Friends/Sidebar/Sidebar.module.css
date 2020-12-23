@@ -1,0 +1,17 @@
+.item {
+    background-color: lightgoldenrodyellow;
+    border-radius: 5px;
+}
+
+.item{
+    margin: 0 auto;
+    display: grid;
+    width: 200px;
+    grid-template-areas:"u";
+
+    grid-template-rows: 60px 1fr;
+    grid-template-columns: 3fr;
+    grid-gap: 10px;
+}
+
+

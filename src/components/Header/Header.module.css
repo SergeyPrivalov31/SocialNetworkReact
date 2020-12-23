@@ -1,0 +1,11 @@
+.header {
+    grid-area: h;
+    background-color: whitesmoke;
+    padding-left: 20px;
+    border-radius: 5px;
+   }
+
+.header img {
+    width: 100px;
+}
+  

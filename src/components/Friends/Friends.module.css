@@ -1,0 +1,10 @@
+.friends {
+    display: grid;
+    grid-template-columns: 2fr 10fr;
+    color: crimson;
+}
+
+.user .active {
+    color: goldenrod;
+    text-decoration: none;
+}
