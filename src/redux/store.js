@@ -1,6 +1,5 @@
 import profileReducer from "./profile-reducer";
 import dialogsReducer from "./dialogs-reducer";
-import usersReducer from "./usersReduser";
 
 let store = {
     _state: {
@@ -29,14 +28,6 @@ let store = {
                 {id: 3, message: 'It is so fun'}
             ]
         },
-        usersPage: {
-            newUserName: "Yo_Man",
-            users: [
-                {id: 1, name: 'Serhio'},
-                {id: 2, name: 'Olyalya'},
-                {id: 3, name: 'Dashunya'}
-            ]
-        },
     },
     _callSubscriber() {
         console.log('State changed');
@@ -50,17 +41,12 @@ let store = {
     dispatch(action) {
         this._state.profilePage = profileReducer(this._state.profilePage, action)
         this._state.DialogsPage = dialogsReducer(this._state.dialogsPage, action)
-        this._state.usersPage = usersReducer(this._state.usersPage, action)
 
         this._callSubscriber(this._state);
     }
 };
 
 export default store;
-
-
-
-
 
 
 /*addPost() {

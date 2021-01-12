@@ -8,8 +8,8 @@ import News from "./components/News/News";
 import Music from "./components/Music/Music";
 import Settings from "./components/Settings/Settings";
 import HeaderRight from "./components/Header/HeaderRight";
-import Friends from "./components/Friends/Friends";
 import DialogsContainer from "./components/Dialogs/DialogsContainer";
+import UsersContainer from "./components/Users/UsersContainer";
 
 const App = (props) => {
     return (
@@ -26,10 +26,8 @@ const App = (props) => {
                 <Route path='/News' component={News}/>
                 <Route path='/Music' component={Music}/>
                 <Route path='/Settings' component={Settings}/>
-
-                <Route path='/Friends'
-                       render={() => <Friends
-                           state={props.state.users}/>}/>
+                <Route path='/users' render={() =>
+                    <UsersContainer />} />
             </div>
         </div>
     )

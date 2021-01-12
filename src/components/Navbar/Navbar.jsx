@@ -1,7 +1,7 @@
 import React from 'react';
 import s from './Navbar.module.css';
 import {NavLink} from "react-router-dom";
-/*import Sidebar from "../Friends/Sidebar/Sidebar";*/
+/*import Sidebar from "../Users/Sidebar/Sidebar";*/
 
 const Navbar = () => {
     return (
@@ -24,9 +24,9 @@ const Navbar = () => {
                 </div>
             </div>
             <h3 className={s.item}>
-                <NavLink to="/friends" activeClassName={s.active}>Friends</NavLink>
+                <NavLink to="/users" activeClassName={s.active}>Find users</NavLink>
             </h3>
-            {/*<Sidebar />*/}
+
         </div>
     );
 }
