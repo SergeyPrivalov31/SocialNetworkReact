@@ -4,7 +4,7 @@ import s from './Profile.module.css';
 import MyPostsContainer from "./MyPosts/MyPostsContainer";
 
 const Profile = () => {
-    debugger;
+
     return (
         <div className={s.wallpepper}>
             <ProfileInfo/>
