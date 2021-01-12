@@ -1,0 +1,15 @@
+.users {
+    display: grid;
+    grid-template-columns: 2fr 10fr;
+    color: crimson;
+}
+
+.user .active {
+    color: goldenrod;
+    text-decoration: none;
+}
+
+.userPhoto {
+    height: 100px;
+    width: 150px;
+    }
