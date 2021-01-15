@@ -10,16 +10,19 @@ const Users = (props) => {
     for (let i = 1; i <= pagesCount; i++) {
         pages.push(i);
     }
-    debugger;
-    return(<div className={styles.cursor}>
 
-                {pages.map(p => {
-                    return <span className={props.currentPage === p && styles.selectedPage}
-                                 onClick={(e) => {
-                                     props.onPageChanged(p);
-                                 }}>{p}</span>
-                })}
+    return (<div>
+            {pages.map(p => {
+                    return (
+                        <span className={props.currentPage === p && styles.selectedPage}
+                              onClick={(e) => {
+                                  props.onPageChanged(p)
+                              }}>{p}</span>
+                    )
+                }
+            )
 
+            }
             {props.users.map(u => <div key={u.id}>
             <span>
                 <div>
