@@ -1,14 +1,13 @@
 
 .description {
     padding: 20px;
-    color: #7abad0;
+   
     font-family: Cambria;
     font: discretionary-ligatures;
     font-size: large
 }
 
 .wallpepper {
- height: 50px;
-    background-color: lightgrey;
-    }
+    height: 100px;
+}
 
