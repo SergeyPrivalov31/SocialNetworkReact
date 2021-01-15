@@ -1,10 +1,9 @@
 import React from 'react';
 import Users from './Users';
 import {connect} from 'react-redux';
-import {followAC, setCurrentPageAC, setUsersAC, setUsersTotalCountAC, unfollowAC, toggleIsFetchingAC} from '../../redux/users-reducer';
+import {follow, setCurrentPage, setUsers, setUsersTotalCount, unfollow, toggleIsFetching} from '../../redux/users-reducer';
 import * as axios from 'axios';
 import Preloader from "../common/Preloader/Preloader";
-
 
 
 export class UsersContainer extends React.Component {
@@ -14,7 +13,7 @@ export class UsersContainer extends React.Component {
             .then(response => {
                 this.props.toggleIsFetching(false);
                 this.props.setUsers(response.data.items);
-                this.props.setTotalUsersCount(response.data.totalCount); // разделил временно на 100, нужно доработать pagination
+                this.props.setUsersTotalCount(response.data.totalCount); // разделил временно на 100, нужно доработать pagination
             });
     }
 
@@ -31,15 +30,15 @@ export class UsersContainer extends React.Component {
     render() {
         return <>
 
-            { this.props.isFetching ? <Preloader /> : null }
+            {this.props.isFetching ? <Preloader/> : null}
 
             < Users totalUsersCount={this.props.totalUsersCount}
-                         pageSize={this.props.pageSize}
-                         currentPage={this.props.currentPage}
-                         onPageChanged={this.onPageChanged}
-                         users={this.props.users}
-                         unfollow={this.props.unfollow}
-                         follow={this.props.follow}
+                    pageSize={this.props.pageSize}
+                    currentPage={this.props.currentPage}
+                    onPageChanged={this.onPageChanged}
+                    users={this.props.users}
+                    unfollow={this.props.unfollow}
+                    follow={this.props.follow}
             />
         </>
     }
@@ -56,7 +55,7 @@ let mapStateToProps = (state) => {
     }
 }
 
-let mapDispatchToProps = (dispatch) => {
+/*let mapDispatchToProps = (dispatch) => {
     return {
         follow: (userId) => {
             dispatch(followAC(userId))
@@ -78,6 +77,7 @@ let mapDispatchToProps = (dispatch) => {
         }
 
     }
-}
+}*/
 
-export default connect(mapStateToProps, mapDispatchToProps)(UsersContainer)
+export default connect(mapStateToProps, { follow, unfollow, setUsers, setCurrentPage,
+    setUsersTotalCount, toggleIsFetching }) (UsersContainer);
