@@ -16,7 +16,6 @@ const usersReducer = (state = initialState, action) => {
         case FOLLOW :
             return {
                 ...state,
-                //users: [...state.users],
                 users: state.users.map(u => {
                     if (u.id === action.userId) {
                         return {...u, followed: true}
@@ -24,12 +23,10 @@ const usersReducer = (state = initialState, action) => {
                     return u
                 })
             }
-
         case
         UNFOLLOW :
             return {
                 ...state,
-                //users: [...state.users],
                 users: state.users.map(u => {
                     if (u.id === action.userId) {
                         return {...u, followed: false}
@@ -37,19 +34,15 @@ const usersReducer = (state = initialState, action) => {
                     return u
                 })
             }
-
         case SET_USERS: {
             return {...state, users: action.users}
         }
-
         case SET_CURRENT_PAGE: {
             return {...state, currentPage: action.currentPage}
         }
-
         case SET_TOTAL_USERS_COUNT: {
             return {...state, totalUsersCount: action.count}
         }
-
         default:
             return state;
     }
