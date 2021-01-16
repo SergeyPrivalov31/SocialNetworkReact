@@ -1,13 +1,10 @@
 
-.description {
-    padding: 20px;
-   
-    font-family: Cambria;
-    font: discretionary-ligatures;
-    font-size: large
+.ava_description {
+    display: grid;
+    grid-template-columns: 300px 2fr;
+    padding: 25px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    background-color: aquamarine;
+    border-radius: 25px;
 }
-
-.wallpepper {
-    height: 100px;
-}
-
