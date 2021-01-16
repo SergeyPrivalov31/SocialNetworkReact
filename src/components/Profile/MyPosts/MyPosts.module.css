@@ -1,20 +1,18 @@
 .content {
     grid-area: c;
-    background-color: lightgrey;
-    border-radius: 20px;
+    background-color: whitesmoke;
+    border-radius: 10px;
     padding-left: 10px;
-    padding-top: 0px;
+    padding-top: 10px;
+    margin-top: 10px;
+    padding-bottom: 0;
 }
 
 .content {
     color: deepskyblue;
     font-family: Cambria;
-    font: discretionary-ligatures;
-    font-size: large
-}
-
-.postsBlock {
-    padding: 10px;
+    font-size: large;
+    padding-top: 0;
 }
 
 .textArea {

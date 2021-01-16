@@ -2,9 +2,19 @@
 .ava_description {
     display: grid;
     grid-template-columns: 300px 2fr;
-    padding: 25px;
-    padding-bottom: 5px;
-    padding-top: 5px;
+    grid-template-rows: 300px 1fr;
+    padding: 10px;
+    margin-bottom: 0px;
     background-color: aquamarine;
-    border-radius: 25px;
+    border-radius: 10px;
+    border-color: darkgray;
+
+}
+
+.ava_description .ava {
+    border-radius: 10px;
+}
+.description {
+    padding: 10px;
+
 }
