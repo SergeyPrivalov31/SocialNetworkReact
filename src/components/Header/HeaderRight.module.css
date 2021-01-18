@@ -1,20 +1,22 @@
 .header {
-    grid-area: hr;
+    margin: 0 auto;
+    display: grid;
+    width: 700px;
+    grid-template-rows: 60px;
+    grid-template-columns: 300px 2fr;
+    grid-gap: 100px;
     background-color: lightpink;
-    height: 50px;
     color: deepskyblue;
     font-family: Arial sans-serif;
     font-style: italic;
     font-size: 25px;
     border-radius: 10px;
-    padding-top: 5px;
-}
-.header a {
-    float: right;
-    color: deepskyblue;
-    font-family: Arial sans-serif;
-    font-style: italic;
-    font-size: 25px;
-    padding-right: 20px;
+    text-align: center;
+    }
+.header login {
+    font-size: 10px;
     text-decoration: none;
-}
+    }
+.header animation {
+    font-size: 25px;
+      }
