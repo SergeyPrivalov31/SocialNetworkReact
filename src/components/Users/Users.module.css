@@ -13,3 +13,9 @@
     height: 100px;
     width: 150px;
     }
+.selectedPage {
+    text-decoration: underline;
+    font-size: x-large;
+    color: lightcoral;
+    cursor: grab;
+}

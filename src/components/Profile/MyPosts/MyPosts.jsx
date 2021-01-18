@@ -17,7 +17,7 @@ const MyPosts = (props) => {
     }
     return (
         <div className={s.content}>
-            <h3>My Posts</h3>
+            My Posts
             <div className={s.textArea}>
                 <textarea onChange={onPostChange}
                           ref={newPostElement} value={props.newPostText}/>

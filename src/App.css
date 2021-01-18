@@ -1,7 +1,7 @@
 .app-wrapper {
   margin: 0 auto;
     display: grid;
-    width: 1200px;
+    width: 900px;
     grid-template-areas:"h hr" "n c";
 
     grid-template-rows: 60px 1fr;
@@ -11,8 +11,9 @@
 
 .app-wrapper-content {
     grid-area: c;
-    background-color: mediumaquamarine;
-    width: 1050px;
+    padding-top: 0px;
+    width: auto;
+    height: auto;
 
  }
 .app-wrapper {

@@ -1,8 +1,8 @@
 .nav {
-    grid-area: "n";
+    grid-area: n;
     grid-template-rows: 2fr;
-    width: 200px;
-    height: 600px;
+    width: 150px;
+    height: auto;
     background-color: whitesmoke;
     padding: 20px;
     border-radius: 5px;
