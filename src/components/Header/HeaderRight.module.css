@@ -1,21 +1,20 @@
 .header {
     grid-area: hr;
     background-color: lightpink;
-
+    height: 50px;
     color: deepskyblue;
-    font-family: Arial;
+    font-family: Arial sans-serif;
     font-style: italic;
-    text-align: center;
     font-size: 25px;
-    position: center;
-    text-align: center;
     border-radius: 10px;
     padding-top: 5px;
 }
-
-.header img {
-
-    width: 100px;
-
+.header a {
+    float: right;
+    color: deepskyblue;
+    font-family: Arial sans-serif;
+    font-style: italic;
+    font-size: 25px;
+    padding-right: 20px;
+    text-decoration: none;
 }
-  

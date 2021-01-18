@@ -6,16 +6,16 @@ import Navbar from './components/Navbar/Navbar';
 import News from "./components/News/News";
 import Music from "./components/Music/Music";
 import Settings from "./components/Settings/Settings";
-import HeaderRight from "./components/Header/HeaderRight";
 import DialogsContainer from "./components/Dialogs/DialogsContainer";
 import UsersContainer from "./components/Users/UsersContainer";
 import ProfileContainer from "./components/Profile/ProfileContainer";
+import HeaderRightContainer from "./components/Header/HeaderRightContainer";
 
 const App = () => {
     return (
         <div className='app-wrapper'>
             <Header/>
-            <HeaderRight/>
+            <HeaderRightContainer />
             <Navbar/>
 
             <div className='app-wrapper-content'>
