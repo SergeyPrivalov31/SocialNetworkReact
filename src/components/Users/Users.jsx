@@ -10,11 +10,11 @@ const Users = (props) => {
     for (let i = 1; i <= pagesCount; i++) {
         pages.push(i);
     }
-    return (<div>
+    return (<div className={styles.userPage}>
             {pages.map(p => {
                     return (
                         <span className={props.currentPage === p && styles.selectedPage}
-                              onClick={(e) => {
+                              onClick={() => {
                                   props.onPageChanged(p)
                               }}>{p}</span>
                     )
@@ -36,7 +36,7 @@ const Users = (props) => {
                             axios.delete(`https://social-network.samuraijs.com/api/1.0/${u.id}`, {
                                 withCredentials: true,
                                 headers: {
-                                    "API-KEY": "81784de3-873b-4142-ac92-9ecfae63edc3"
+                                    "API-KEY": "1b518eb4-791f-4cd5-83c0-854ef9a0b789"
                                 }
                             })
                                 .then(response => {
@@ -54,7 +54,7 @@ const Users = (props) => {
                             axios.post(`https://social-network.samuraijs.com/api/1.0/${u.id}`, {
                                 withCredentials: true,
                                 headers: {
-                                    "API-KEY": "81784de3-873b-4142-ac92-9ecfae63edc3"
+                                    "API-KEY": "1b518eb4-791f-4cd5-83c0-854ef9a0b789"
                                 }
                             })
                                 .then(response => {

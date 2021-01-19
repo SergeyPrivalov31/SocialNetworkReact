@@ -3,6 +3,7 @@
     grid-template-columns: 2fr 10fr;
     color: crimson;
     background-color: cadetblue;
+    border-radius: 15px;
 }
 
 .user .active {
@@ -19,4 +20,8 @@
     font-size: x-large;
     color: lightcoral;
     cursor: grab;
+}
+.userPage{
+    background-color: cadetblue;
+    color: navajowhite;;
 }

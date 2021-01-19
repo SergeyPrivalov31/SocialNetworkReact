@@ -1,6 +1,6 @@
 .content {
     grid-area: c;
-    background-color: whitesmoke;
+    background-color: cadetblue;
     border-radius: 10px;
     padding-left: 10px;
     padding-top: 10px;
@@ -9,7 +9,7 @@
 }
 
 .content {
-    color: deepskyblue;
+    color: navajowhite;
     font-family: Arial Cambria, sans-serif;
     font-size: large;
     padding-top: 0;
@@ -20,5 +20,5 @@
 }
 
 .button {
-    background-color: #1fa77f;
+    background-color: navajowhite;
 }
