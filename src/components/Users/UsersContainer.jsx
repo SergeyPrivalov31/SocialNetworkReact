@@ -9,43 +9,31 @@ import {
     unfollow,
     toggleIsFetching
 } from '../../redux/users-reducer';
-import * as axios from 'axios';
 import Preloader from "../common/Preloader/Preloader";
+import {usersAPI} from "../../api/api";
 
 
 export class UsersContainer extends React.Component {
     componentDidMount() {
         this.props.toggleIsFetching(true);
-        axios.get(`https://social-network.samuraijs.com/api/1.0/users?page=${this.props.currentPage}&count=${this.props.pageSize}`,
-            {
-                withCredentials: true,
-                headers: {
-                    "API-KEY": "85011dda-dbb7-4dd6-8396-816804b3e439"
-                }
-            })
-            .then(response => {
+
+        usersAPI.getUsers(this.props.currentPage, this.props.pageSize)
+            .then(data => {
                 this.props.toggleIsFetching(false);
-                this.props.setUsers(response.data.items);
-                this.props.setUsersTotalCount(response.data.totalCount); // разделил временно на 100, нужно доработать pagination
+                this.props.setUsers(data.items);
+                this.props.setUsersTotalCount(data.totalCount); // разделил временно на 100, нужно доработать pagination
             });
     }
-
     onPageChanged = (pageNumber) => {
         this.props.setCurrentPage(pageNumber);
         this.props.toggleIsFetching(true);
-        axios.get(`https://social-network.samuraijs.com/api/1.0/users?page=${pageNumber}&count=${this.props.pageSize}`,
-            {
-                withCredentials: true,
-                headers: {
-                    "API-KEY": "85011dda-dbb7-4dd6-8396-816804b3e439"
-                }
-            })
-            .then(response => {
+
+        usersAPI.getUsers(pageNumber, this.props.pageSize)
+            .then(data => {
                 this.props.toggleIsFetching(false);
-                this.props.setUsers(response.data.items);
+                this.props.setUsers(data.items);
             });
     }
-
     render() {
         return <>
 
@@ -62,8 +50,6 @@ export class UsersContainer extends React.Component {
         </>
     }
 }
-
-
 let mapStateToProps = (state) => {
     return {
         users: state.usersPage.users,
@@ -74,7 +60,7 @@ let mapStateToProps = (state) => {
     }
 }
 
-/*let mapDispatchToProps = (dispatch) => {
+/*let mapDispatchToProps = (dispatch) => {  //это развёрнутая запись кода который указан ниже в connect()()
     return {
         follow: (userId) => {
             dispatch(followAC(userId))
