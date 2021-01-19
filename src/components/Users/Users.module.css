@@ -2,6 +2,7 @@
     display: grid;
     grid-template-columns: 2fr 10fr;
     color: crimson;
+    background-color: cadetblue;
 }
 
 .user .active {
