@@ -25,6 +25,7 @@ const App = () => {
                 <Route path='/Music' component={Music}/>
                 <Route path='/Settings' component={Settings}/>
                 <Route path='/users' render={() => <UsersContainer />} />
+                <Route path='/login' render={() => <Login />} />
             </div>
         </div>
     )
