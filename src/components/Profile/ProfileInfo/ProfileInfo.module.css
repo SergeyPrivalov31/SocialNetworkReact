@@ -1,8 +1,7 @@
 
 .ava_description {
     display: grid;
-    grid-template-columns: 300px 2fr;
-    grid-template-rows: 300px 1fr;
+    grid-template-columns: 150px 2fr;
     padding: 10px;
     margin-bottom: 0;
     background-color: aquamarine;
@@ -11,13 +10,11 @@
 
 }
 
-.ava_description .ava {
-    border-radius: 10px;
-}
 .description {
     padding: 10px;
-    font-size: x-large;
+    font-size: large;
     font-family: Georgia, fantasy;
     color: black;
+    text-align: justify-all;
 
 }
