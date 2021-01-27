@@ -2,7 +2,6 @@
     display: grid;
     grid-template-columns: 2fr 10fr;
     color: black;
-
 }
 
 .dialogsItems {
@@ -35,7 +34,5 @@
     color: black;
     text-decoration: none;
 }
-
-
 
 

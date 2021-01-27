@@ -1,13 +1,20 @@
-.item{
-color: rebeccapurple;
-font-size: medium
+.item {
+    background-color: cadetblue;
+    color: navajowhite;
+    font-size: medium;
+    padding-top: 10px;
+    padding-left: 10px;
+    border-radius: 10px;
+    border: 1px solid #ffffff
 }
+
 .item img {
     width: 50px;
     height: 50px;
     border-radius: 40px;
     background-color: lightpink;
 }
+
 .alt {
     width: 50px;
     height: 50px;
