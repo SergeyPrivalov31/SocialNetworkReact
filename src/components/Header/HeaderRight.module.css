@@ -13,9 +13,12 @@
     border-radius: 10px;
     text-align: center;
     }
-.header login {
-    font-size: 10px;
+.login {
+    font-family: Arial sans-serif;
+    font-style: italic;
+    font-size: 25px;
     text-decoration: none;
+    color: deepskyblue;
     }
 .header animation {
     font-size: 25px;
