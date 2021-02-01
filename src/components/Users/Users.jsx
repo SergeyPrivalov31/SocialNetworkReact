@@ -22,8 +22,9 @@ const Users = (props) => {
                              }}>{p}</span>
             })}
         </div>
-        {
-            props.users.map(u => <div key={u.id}>
+        <div>
+            {
+                props.users.map(u => <div key={u.id}>
             <span>
                 <div>
                     <NavLink to={'/profile/' + u.id}>
@@ -50,7 +51,7 @@ const Users = (props) => {
                             </span>
 
 
-                <span>
+                    <span>
                             <span>
                                 <div>{u.name}</div>
                                 <div>{u.status}</div>
@@ -60,8 +61,9 @@ const Users = (props) => {
                                 <div>{"u.location.city"}</div>
                             </span>
                 </span>
-            </div>)
-        }
+                </div>)
+            }
+        </div>
     </div>
 }
 

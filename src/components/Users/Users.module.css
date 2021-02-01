@@ -4,6 +4,7 @@
     color: crimson;
     background-color: cadetblue;
     border-radius: 15px;
+    padding: 20px;
 }
 
 .user .active {
@@ -18,7 +19,7 @@
 .selectedPage {
     text-decoration: underline;
     font-size: x-large;
-    color: lightcoral;
+    color: black;
     cursor: grab;
 }
 .userPage{
