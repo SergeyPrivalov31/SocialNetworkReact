@@ -1,0 +1,11 @@
+.paginator{
+    padding: 20px;
+    color: darksalmon;
+}
+
+.selectedPage {
+    text-decoration: underline;
+    font-size: x-large;
+    color: black;
+    cursor: grab;
+}

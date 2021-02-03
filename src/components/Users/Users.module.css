@@ -1,6 +1,7 @@
 .users {
     display: grid;
-    grid-template-columns: 2fr 10fr;
+    grid-area: c;
+    grid-template-rows: 2fr auto;
     color: crimson;
     background-color: cadetblue;
     border-radius: 15px;
@@ -16,12 +17,7 @@
     height: 100px;
     width: 150px;
     }
-.selectedPage {
-    text-decoration: underline;
-    font-size: x-large;
-    color: black;
-    cursor: grab;
-}
+
 .userPage{
     background-color: cadetblue;
     color: navajowhite;
