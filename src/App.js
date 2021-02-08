@@ -14,13 +14,11 @@ import {compose} from "redux";
 import {initializeApp} from "./redux/app-reducer";
 import Preloader from "./components/common/Preloader/Preloader";
 import store from "./redux/redux-store";
-import {BrowserRouter} from "react-router-dom";
+import {BrowserRouter, HashRouter} from "react-router-dom";
 import withSuspense from "./hoc/withSuspense";
 
 const DialogsContainer = React.lazy(() => import('./components/Dialogs/DialogsContainer'));
 const ProfileContainer = React.lazy(() => import('./components/Profile/ProfileContainer'));
-//import DialogsContainer from "./components/Dialogs/DialogsContainer";
-//import ProfileContainer from "./components/Profile/ProfileContainer";
 
 class App extends React.Component {
     componentDidMount() {
@@ -61,11 +59,11 @@ const AppContainer = compose(
     connect(mapStateToProps, { initializeApp }))(App);
 
 const SamuraiJSApp = (props) => {
-    return <BrowserRouter>
+    return <HashRouter>
         <Provider store={store}>
             <AppContainer />
         </Provider>
-    </BrowserRouter>
+    </HashRouter>
 }
 
 export default SamuraiJSApp;
