@@ -1,4 +1,5 @@
 import {usersAPI} from "../api/api";
+import {stopSubmit} from "redux-form";
 
 const ADD_POST = 'ADD-POST';
 const SET_USER_PROFILE = 'SET_USER_PROFILE';
@@ -10,10 +11,10 @@ let initialState = {
     posts: [
         {id: 1, message: 'Hi everyone!', likesCount: 5},
         {id: 2, message: 'It is my first post', likesCount: 7},
-        {id: 3, message: 'Hakuna Matata', likesCount: 52}
+        {id: 3, message: 'Hallo', likesCount: 52}
     ],
-    profile: null,
-    status: ""
+    profile: undefined,
+    status: undefined
 }
 
 const profileReducer = (state = initialState, action) => {
@@ -79,6 +80,18 @@ export const savePhoto = (file) => async (dispatch) => {
     let response = await usersAPI.savePhoto(file)
     if (response.data.resultCode === 0) {
         dispatch(savePhotoSuccess(response.data.data.photos));
+    }
+}
+
+export const saveProfile = (profile) => async (dispatch, getState) => {
+    const userId = getState().auth.userId;
+    const response = await usersAPI.saveProfile(profile)
+
+    if (response.data.resultCode === 0) {
+        dispatch(getProfile(userId));
+    } else {
+        dispatch(stopSubmit("edit-profile", {_error: response.data.messages[0]}))
+        return Promise.reject(response.data.messages[0])//{"contacts": {"facebook": response.data.messages[0]} }))нужно парсить строки =(
     }
 }
 

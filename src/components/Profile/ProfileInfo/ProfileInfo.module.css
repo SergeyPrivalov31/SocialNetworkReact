@@ -4,7 +4,7 @@
     grid-template-columns: 300px 2fr;
     padding: 10px;
     margin-bottom: 0;
-    background-color: #ffff44;
+    background-color: #ffff84;
     border-radius: 10px;
     border-color: darkgray;
 
@@ -15,16 +15,20 @@
     }
 .description {
     padding-left: 20px;
-    font-size: large;
-    font-family: SansSerif, fantasy;
-    color: crimson;
-    font-weight: initial;
-    font-style: normal;
-
+    color: dimgrey;
+    font-size: medium;
     text-align: left;
 
 }
 .statusBlock{
     color: red;
     text-align: center;
+}
+.contact{
+    color: darkred;
+}
+.contacts{
+    font-style: italic;
+    font-size: larger;
+    color: lightcoral;
 }

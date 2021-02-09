@@ -19,8 +19,12 @@ const ProfileInfo = ({profile, isOwner, savePhoto, status, updateStatus, savePro
         }
     }
     const onSubmit = (formData) => {
-        saveProfile(formData)
+        saveProfile(formData).then(() => {
+                setEditMode(false);
+            }
+        );
     }
+
     return (
         <div className={s.ava_description}>
             <div>
@@ -30,7 +34,7 @@ const ProfileInfo = ({profile, isOwner, savePhoto, status, updateStatus, savePro
             </div>
             <div>
                 {editMode
-                    ? <ProfileDataForm profile={profile} onSubmit={onSubmit}/>
+                    ? <ProfileDataForm initialValues={profile} profile={profile} onSubmit={onSubmit}/>
                     : <ProfileData goToEditMode={() => {
                         setEditMode(true)
                     }}
@@ -40,6 +44,7 @@ const ProfileInfo = ({profile, isOwner, savePhoto, status, updateStatus, savePro
     )
 }
 
+
 const ProfileData = ({profile, isOwner, goToEditMode}) => {
     return <div className={s.description}>
         {isOwner && <div>
@@ -48,11 +53,11 @@ const ProfileData = ({profile, isOwner, goToEditMode}) => {
         <div><b>Full name: </b>{profile.fullName}</div>
         <div><b>Looking for a job</b>: {profile.lookingForAJob ? "yes" : "no"}</div>
         {profile.lookingForAJob &&
-        <div><b>My professional skills</b>: {profile.lookingForAJobDescription ? "yes" : "no"}</div>
+        <div><b>My professional skills</b>: {profile.lookingForAJobDescription}</div>
         }
         <div><b>About me</b>: {profile.aboutMe}</div>
         <div>
-            <b>Contacts</b>: {Object.keys(profile.contacts).map(key => {
+            <b className={s.contacts}>Contacts</b> {Object.keys(profile.contacts).map(key => {
             return <Contact key={key} contactTitle={key} contactValue={profile.contacts[key]}/>
         })}
         </div>

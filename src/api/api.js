@@ -30,6 +30,9 @@ export const usersAPI = {
     updateStatus(status) {
         return instance.put(`profile/status/`, {status: status});
     },
+    saveProfile(profile) {
+        return instance.put(`profile`, profile);
+    },
     savePhoto(photoFile) {
         const formData = new FormData();
         formData.append("image", photoFile);
@@ -53,16 +56,5 @@ export const authAPI = {
     }
 }
 
-/*export const profileAPI = {
-    getProfile(userId) {
-        return instance.get(`profile/${userId}`);
-    },
-    getStatus(userId) {
-        return instance.get(`profile/status/` + userId);
-    },
-    updateStatus(status) {
-        return instance.put(`profile/status/`, {status: status});
-    }
-}*/
 
 
