@@ -4,7 +4,7 @@
     grid-template-columns: 300px 2fr;
     padding: 10px;
     margin-bottom: 0;
-    background-color: aquamarine;
+    background-color: #ffff44;
     border-radius: 10px;
     border-color: darkgray;
 
@@ -14,14 +14,14 @@
     border-radius: 10px;
     }
 .description {
-    padding: 10px;
-    font-size: xx-large;
-    font-family: Georgia, fantasy;
-    color: peru;
-        font-weight: bold;
-    font-style: italic;
+    padding-left: 20px;
+    font-size: large;
+    font-family: SansSerif, fantasy;
+    color: crimson;
+    font-weight: initial;
+    font-style: normal;
 
-    text-align: center;
+    text-align: left;
 
 }
 .statusBlock{
