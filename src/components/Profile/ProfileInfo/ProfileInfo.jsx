@@ -17,8 +17,8 @@ const ProfileInfo = (props) => {
     }
     return (
         <div className={s.ava_description}>
-            <div className={s.ava}>
-                <img src={props.profile.photos.large || userPhoto} alt={' '}/>
+            <div>
+                <img className={s.ava} src={props.profile.photos.large || userPhoto} alt={' '}/>
                 { props.isOwner && <input type={"file"} onChange={onMainPhotoSelected} />}
                 <ProfileStatusWithHooks status={props.status} updateStatus={props.updateStatus} />
             </div>

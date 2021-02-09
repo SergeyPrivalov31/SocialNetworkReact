@@ -3,7 +3,6 @@
     display: grid;
     width: 900px;
     grid-template-areas:"h hr" "n c";
-
     grid-template-rows: 60px 1fr;
     grid-template-columns: 2fr 10fr;
     grid-gap: 10px;
@@ -21,9 +20,8 @@
     font-style: normal;
     font-size: 14px;
     line-height: 1.8;
-    padding: 0;
     margin: 0;
-    padding-top: 5px;
+    padding: 10px;
     }
 
 
