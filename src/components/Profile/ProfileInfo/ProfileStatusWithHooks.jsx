@@ -9,7 +9,8 @@ const ProfileStatusWithHooks = (props) => {
 
     useEffect(() => {
         setStatus(props.status);
-    }, [props.status] );
+    }, [props.status] );//копируем статус который к нам пришёл из пропсов в свой локальный стейт (с помощью useState,
+                            // только в том случае если статус из вне поменялся
 
     const activateEditMode = () => {
         setEditMode(true)

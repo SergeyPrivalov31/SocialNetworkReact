@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import {Route, withRouter} from "react-router";
+import {Redirect, Route, Switch, withRouter} from "react-router";
 import Header from './components/Header/Header';
 import Navbar from './components/Navbar/Navbar';
 import News from "./components/News/News";
@@ -27,8 +27,11 @@ class App extends React.Component {
 
     render() {
         if (!this.props.initialized) {
-        return <Preloader />
+            return <Preloader/>
         }
+        //пока компонента инициализируется, показываем крутилку,
+        // как только пропсы изменяться, изменяться данные,
+        // initialized будет true. Вернём всё остальное
 
         return (
             <div className='app-wrapper'>
@@ -37,13 +40,17 @@ class App extends React.Component {
                 <Navbar/>
 
                 <div className='app-wrapper-content'>
-                    <Route path='/profile/:userId?' render={withSuspense(ProfileContainer)}/>
-                    <Route path='/dialogs' render={withSuspense(DialogsContainer)}/>
-                    <Route path='/News' component={News}/>
-                    <Route path='/Music' component={Music}/>
-                    <Route path='/Settings' component={Settings}/>
-                    <Route path='/users' render={() => <UsersContainer/>}/>
-                    <Route path='/login' render={() => <Login/>}/>
+                    <Switch>
+                        <Route exact path='/' render={() => <Redirect to={'/profile'}/>}/>
+                        <Route path='/profile/:userId?' render={withSuspense(ProfileContainer)}/>
+                        <Route path='/dialogs' render={withSuspense(DialogsContainer)}/>
+                        <Route path='/News' component={News}/>
+                        <Route path='/Music' component={Music}/>
+                        <Route path='/Settings' component={Settings}/>
+                        <Route path='/users' render={() => <UsersContainer/>}/>
+                        <Route path='/login' render={() => <Login/>}/>
+                        <Route path='*' render={() => <div>404 NOT FOUND</div>}/>
+                    </Switch>
                 </div>
             </div>
         )
@@ -56,14 +63,14 @@ const mapStateToProps = (state) => ({
 
 const AppContainer = compose(
     withRouter,
-    connect(mapStateToProps, { initializeApp }))(App);
+    connect(mapStateToProps, {initializeApp}))(App);
 
-const SamuraiJSApp = (props) => {
-    return <HashRouter>
+const SamuraiJSApp = () => {
+    return <BrowserRouter>
         <Provider store={store}>
-            <AppContainer />
+            <AppContainer/>
         </Provider>
-    </HashRouter>
+    </BrowserRouter>
 }
 
 export default SamuraiJSApp;

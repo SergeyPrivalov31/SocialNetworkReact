@@ -70,10 +70,15 @@ export const getStatus = (userId) => async (dispatch) => {
     dispatch(setStatus(response.data));
 }
 export const updateStatus = (status) => async (dispatch) => {
-    let response = await usersAPI.updateStatus(status)
-    if (response.data.resultCode === 0) {
-        dispatch(setStatus(status));
+    try {
+        let response = await usersAPI.updateStatus(status)
+        if (response.data.resultCode === 0) {
+            dispatch(setStatus(status));
+        }
+    } catch (error) {
+        alert('многоБукав')//здесть можем диспатчить, писать алерты, собирать мусор (SAGA подойдёт)
     }
+
 }
 
 export const savePhoto = (file) => async (dispatch) => {

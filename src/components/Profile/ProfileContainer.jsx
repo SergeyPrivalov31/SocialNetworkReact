@@ -7,9 +7,9 @@ import {compose} from "redux";
 class ProfileContainer extends React.Component {
 
     refreshProfile() {
-        let userId = this.props.match.params.userId;
+        let userId = this.props.match.params.userId;// match взялся благодаря withRouter (коннектит к url)
         if (!userId) {
-            userId = this.props.authorizedUserId;
+            userId = this.props.authorizedUserId;// authorizedUserId взялся благодаря connect (коннектит к стору)
             if(!userId) {this.props.history.push("/login")}
         }
         this.props.getProfile(userId);
