@@ -1,11 +1,11 @@
 import React from 'react';
 import s from './Post.module.css';
-
+import image from '../../../../assets/images/lunatiki.png';
 const Post = (props) => {
    return (
     <div className={s.item}>
       <div>
-        <img src='https://sun9-25.userapi.com/c639625/v639625595/51141/mmSXFmNkbU4.jpg?ava=1' />
+        <img src={image} />
         <span> {props.message} </span>
       </div>
       <div className={s.like}>
