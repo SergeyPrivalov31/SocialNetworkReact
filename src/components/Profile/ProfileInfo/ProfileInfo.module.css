@@ -2,13 +2,13 @@
 .ava_description {
     display: grid;
     grid-template-columns: 300px 2fr;
-    padding: 10px;
-    margin-bottom: 0;
-    background-color: #ffff84;
+    padding: 20px;
+    margin: 0 auto;
+    background-color: rgb(199, 222, 230);
     border-radius: 10px;
+    border-width: 5px;
     border-color: darkgray;
-
-}
+    }
 .ava{
     border-image: round;
     border-radius: 10px;

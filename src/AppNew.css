@@ -1,26 +1,19 @@
 .app-wrapper {
-  margin: auto;
+  margin: 0 auto;
     display: grid;
     width: 900px;
-    grid-template-areas:"h hr" "n c";
+    grid-template-areas:"n c";
     grid-template-rows: auto 1fr;
-    grid-template-columns: 20% 80%;
+    grid-template-columns: 2fr 10fr;
     grid-gap: 10px;
-    }
+    justify-items: center;
 
-
-.app-wrapper {
     font-family: Montserrat, sans-serif;
     font-weight: 400;
     font-style: normal;
     font-size: 14px;
     line-height: 1.8;
-    margin: 0;
-    padding: 10px;
     }
-
-
-
 
 
 

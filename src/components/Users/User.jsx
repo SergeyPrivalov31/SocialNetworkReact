@@ -29,8 +29,6 @@ const User = ({user, followingInProgress, unfollow, follow}) => {
                             
                               </div>
             </span>
-
-
         <span>
                             <span>
                                 <div>{user.name}</div>

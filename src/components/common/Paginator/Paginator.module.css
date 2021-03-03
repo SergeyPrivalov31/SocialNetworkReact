@@ -8,5 +8,7 @@
 }
 .pageNumber.selectedPage {
     font-weight: bold;
-    border-color: black;
+    border-color:gold;
+    border-width: bold;
+    background-color:  goldenrod;
 }

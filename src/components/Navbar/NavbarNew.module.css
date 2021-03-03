@@ -1,0 +1,15 @@
+.nav {
+    grid-area: n;
+    grid-template-columns: 10px;
+    justify-content: flex-end;
+    margin: 0;
+}
+
+.item a {
+    color: deepskyblue;
+    text-decoration: none;
+}
+
+.item a.active {
+    color: goldenrod;
+}

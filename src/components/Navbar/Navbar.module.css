@@ -1,11 +1,14 @@
 .nav {
     grid-area: n;
     grid-template-rows: 2fr;
-    width: 150px;
+    width: auto;
     height: auto;
-    background-color: navajowhite;
-    padding: 20px;
+    background-color: #e6e5d4;
+    padding: 40px;
+    margin-left: 20px;
     border-radius: 5px;
+    text-align: justify;
+    font-size: large;
 }
 
 .item a {

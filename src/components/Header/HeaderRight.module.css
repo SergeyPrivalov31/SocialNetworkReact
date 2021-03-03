@@ -1,17 +1,20 @@
 .header {
     margin: 0 auto;
+    padding-inline: 10px;
     display: grid;
-    width: 700px;
+    width: auto;
+    height: auto;
     grid-template-rows: 60px;
-    grid-template-columns: 300px 2fr;
+    grid-template-columns: auto 2fr;
     grid-gap: 100px;
-    background-color: lightpink;
+    background-color: #e6e5d4;
     color: deepskyblue;
     font-family: Arial sans-serif;
     font-style: italic;
     font-size: 25px;
     border-radius: 10px;
     text-align: center;
+
     }
 .login {
     font-family: Arial sans-serif;
