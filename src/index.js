@@ -4,7 +4,7 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import SamuraiJSApp from "./App";
 
-export let rerenderEntireTree = () => {
+export const rerenderEntireTree = () => {
     ReactDOM.render(<SamuraiJSApp />,
         document.getElementById('root'))
 }

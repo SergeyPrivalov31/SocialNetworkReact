@@ -1,8 +1,7 @@
-/*
+
 .users {
-    display: grid;
-    grid-area: c;
-    grid-template-rows: 2fr auto;
+    display:flex;
+	justify-content: center;
     color: crimson;
     background-color: cadetblue;
     border-radius: 15px;
@@ -14,12 +13,8 @@
     text-decoration: none;
 }
 
-.userPhoto {
-    height: 100px;
-    width: 150px;
-    }
 
 .userPage{
     background-color: cadetblue;
     color: navajowhite;
-}*/
+}

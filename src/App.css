@@ -1,3 +1,10 @@
+.app{
+	display: flex;
+	justify-content: center;
+	background-color: black;
+
+}
+
 .app-wrapper {
   margin: auto;
     display: grid;
@@ -5,7 +12,7 @@
     grid-template-areas:"h hr" "n c";
     grid-template-rows: auto 1fr;
     grid-template-columns: 20% 80%;
-    grid-gap: 10px;
+    grid-gap: 5px;
     }
 
 
