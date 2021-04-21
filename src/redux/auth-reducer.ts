@@ -1,6 +1,5 @@
 import { authAPI, securityAPI } from "../api/api";
 import { stopSubmit } from "redux-form";
-import { type } from "node:os";
 
 const SET_USER_DATA = 'network/auth/SET_USER_DATA';
 const GET_CAPTCHA_URL_SUCCESS = 'network/auth/GET_CAPTCHA_URL_SUCCESS';
@@ -62,8 +61,12 @@ export const getAuthUserData = () => async (dispatch: any) => {
 	}
 }
 
+type GetCaptchaUrlSuccessType = {
+	type: typeof GET_CAPTCHA_URL_SUCCESS
+	payload: { captchaUrl: string }
+}
 
-export const getCaptchaUrlSuccess = (captchaUrl: any) => ({
+export const getCaptchaUrlSuccess = (captchaUrl: any): GetCaptchaUrlSuccessType => ({
 	type: GET_CAPTCHA_URL_SUCCESS, payload:
 		{ captchaUrl }
 })
@@ -80,14 +83,14 @@ export const login = (email: string | null, password: string | null, rememberMe:
 		dispatch(stopSubmit("login", { _error: message }));
 	}
 }
-export const getCaptchaUrl = () => async (dispatch) => {
+export const getCaptchaUrl = () => async (dispatch: any) => {
 	const response = await securityAPI.getCaptchaUrl()
 	const captchaUrl = response.data.url;
 
 	dispatch(getCaptchaUrlSuccess(captchaUrl))
 }
 
-export const logout = () => async (dispatch) => {
+export const logout = () => async (dispatch: any) => {
 	let response = await authAPI.logout()
 	if (response.data.resultCode === 0) {
 		dispatch(setAuthUserData(null, null, null, false));
