@@ -29,9 +29,6 @@ class App extends React.Component {
 		if (!this.props.initialized) {
 			return <Preloader />
 		}
-		//пока компонента инициализируется, показываем крутилку,
-		// как только пропсы изменяться, изменяться данные,
-		// initialized будет true. Вернём всё остальное
 
 		return (
 			<div className='app'>
@@ -68,11 +65,11 @@ const AppContainer = compose(
 	connect(mapStateToProps, { initializeApp }))(App);
 
 const SamuraiJSApp = () => {
-	return <HashRouter>
+	return <BrowserRouter>
 		<Provider store={store}>
 			<AppContainer />
 		</Provider>
-	</HashRouter>
+	</BrowserRouter>
 }
 
 export default SamuraiJSApp;
